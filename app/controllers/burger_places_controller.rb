@@ -1,7 +1,5 @@
-class PagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:home]
-
-  def home
+class BurgerPlacesController < ApplicationController
+  def index
     @burger_places = BurgerPlace.where.not(latitude: nil, longitude: nil)
 
     @markers = @burger_places.map do |flat|

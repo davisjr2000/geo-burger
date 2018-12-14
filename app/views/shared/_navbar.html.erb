@@ -1,4 +1,4 @@
-<div class="navbar-wagon">
+<div class="<%= current_page?('/') ? 'navbar-root' : 'navbar-show' %>">
   <!-- Logo -->
   <%= link_to root_path, class: "navbar-wagon-brand" do %>
     <%= image_tag "blackburger.png", height: 50 %>

@@ -1,4 +1,5 @@
 class BurgerPlacesController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:index, :show]
   def index
     @burger_places = BurgerPlace.where.not(latitude: nil, longitude: nil)
 
@@ -8,5 +9,9 @@ class BurgerPlacesController < ApplicationController
         lat: flat.latitude
       }
     end
+  end
+
+  def show
+    @burger_place = BurgerPlace.find(params[:id])
   end
 end

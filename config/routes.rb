@@ -10,6 +10,7 @@ Rails.application.routes.draw do
 
   #BURGER PLACES
 
-  resources :burger_places, only: [:index, :show]
+  resources :burger_places, only: [:index]
+  get "hamburguerias/:display_name", to: "burger_places#show", as: "hamburgeria"
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

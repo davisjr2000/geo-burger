@@ -12,6 +12,6 @@ class BurgerPlacesController < ApplicationController
   end
 
   def show
-    @burger_place = BurgerPlace.find(params[:id])
+    @burger_place = BurgerPlace.find_by(display_name: params[:display_name])
   end
 end

@@ -1,10 +1,21 @@
 // Specific CSS for your home-page
 .girl-image{
-  width:40%;
-  height:40%;
+  width:80%;
+  height:80%;
   border-radius: 5px;
+  max-width:400px;
 }
 
 .home-list{
   margin-top:20px;
+}
+
+li{
+  font-size:28px;
+  margin:5%;
+}
+
+.list-title{
+  // border-bottom: 3px solid red;
+  font-size:40px;
 }

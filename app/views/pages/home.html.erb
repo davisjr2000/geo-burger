@@ -1,7 +1,7 @@
 <div class="burger-banner" style="background-image:  url(<%= asset_path 'burgers-banner.png' %>)">
   <div class="banner-content">
     <h1>GeoBurger</h1>
-    <p>Encontre hambúrgeres saborosos perto de você</p>
+    <p>Descubra hambúrgeres saborosos perto de você</p>
     <a href="#" class="scroll-down">↓</a>
   </div>
 </div>
@@ -15,6 +15,17 @@
 ></div>
 <div class="container home-list">
   <div class="row">
-  <%= image_tag "girl.jpg", class: "girl-image" %>
+    <div class="col-xs-6">
+      <h2 class="text-center list-title">GeoBurger</h2>
+      <ul style="list-style: none;">
+        <li><i class="fas fa-map-marker-alt"></i> Encontre o hambúrguer mais perto de você</li>
+        <li><i class="far fa-star"></i> Avalie suas hamburguerias preferidas</li>
+        <li><i class="far fa-comment"></i> Leia os comentários e </li>
+        <li><i class="fas fa-users"></i> Seja parte da comunidade louca por hambúrgueres</li>
+      </ul>
+    </div>
+    <div class="col-xs-6">
+      <%= image_tag "girl.jpg", class: "girl-image" %>
+    </div>
   </div>
 </div>

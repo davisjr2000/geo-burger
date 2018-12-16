@@ -1,2 +1,11 @@
-<%= burger_place.name %>
-<%= burger_place.address %>
+<%= link_to hamburgeria_path(display_name: burger_place.display_name) do %>
+  <div class="row">
+    <div class="col-xs-6">
+      <h3><%= burger_place.name %></h3>
+      <p><%= burger_place.address %></p>
+    </div>
+      <div class="col-xs-6">
+      <%= image_tag "display-burger.jpg", class: "display-img" %>
+    </div>
+  </div>
+<% end %>

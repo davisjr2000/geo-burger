@@ -1,6 +1,8 @@
 import 'mapbox-gl/dist/mapbox-gl.css'
 import mapboxgl from 'mapbox-gl/dist/mapbox-gl.js';
 
+ // Home Page Map
+
 const mapElement = document.getElementById('map');
 
 if (mapElement) { // only build a map if there's a div#map to inject into
@@ -30,6 +32,3 @@ if (mapElement) { // only build a map if there's a div#map to inject into
     map.fitBounds(bounds, { duration: 0, padding: 75 })
   }
 }
-
-
-

@@ -14,5 +14,7 @@ class BurgerPlacesController < ApplicationController
 
   def show
     @burger_place = BurgerPlace.find_by(display_name: params[:display_name])
+    @marker = [{ lng: @burger_place.longitude, lat: @burger_place.latitude,
+        infoWindow: { content: render_to_string(partial: "/burger_places/show_map_window", locals: { burger_place: @burger_place }) } }]
   end
 end

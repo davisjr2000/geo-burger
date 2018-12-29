@@ -4,6 +4,10 @@
       <h1><%= @burger_place.name %></h1>
       <h2><%= @burger_place.address%></h2>
       <% @burger_place.rating.to_i.times do %> <i class="fas fa-star" style="color: orange"></i> <% end %>
+      <h4> R$ <%= @burger_place.price %></h4>
+      <% if @burger_place.price < 35 %>
+       <h4> Esse é o hamburger mais barato perto de você !</h4>
+       <% end %>
      </div>
    </div>
    <div class="col-xs-4">
